@@ -18,28 +18,28 @@ import sys
 def main():
     '''Main driver'''
 
-    sys.setrecursionlimit(2000) # Allows us to not overflow stack when calling on recursive functions like quick sort
+    sys.setrecursionlimit(5000) # Allows us to not overflow stack when calling on recursive functions like quick sort
 
     # Variables to store average times
     # Bubble
-    b_10_n = b_10_o = b_10_r = 0          # Size 10
-    b_100_n = b_100_o = b_100_r = 0       # Size 100
-    b_1000_n = b_1000_o = b_1000_r = 0    # Size 1000
+    b_35_n = b_35_o = b_35_r = 0          # Size 35
+    b_350_n = b_350_o = b_350_r = 0       # Size 350
+    b_3500_n = b_3500_o = b_3500_r = 0    # Size 3500
 
     # Merge
-    m_10_n = m_10_o = m_10_r = 0          # Size 10  
-    m_100_n = m_100_o = m_100_r = 0       # Size 100
-    m_1000_n = m_1000_o = m_1000_r = 0    # Size 1000
+    m_35_n = m_35_o = m_35_r = 0          # Size 35  
+    m_350_n = m_350_o = m_350_r = 0       # Size 350
+    m_3500_n = m_3500_o = m_3500_r = 0    # Size 3500
 
     # Quick
-    q_10_n = q_10_o = q_10_r = 0          # Size 10 
-    q_100_n = q_100_o = q_100_r = 0       # Size 100
-    q_1000_n = q_1000_o = q_1000_r = 0    # Size 1000
+    q_35_n = q_35_o = q_35_r = 0          # Size 35 
+    q_350_n = q_350_o = q_350_r = 0       # Size 350
+    q_3500_n = q_3500_o = q_3500_r = 0    # Size 3500
 
     # Selection
-    s_10_n = s_10_o = s_10_r = 0          # Size 10
-    s_100_n = s_100_o = s_100_r = 0       # Size 100
-    s_1000_n = s_1000_o = s_1000_r = 0    # Size 1000
+    s_35_n = s_35_o = s_35_r = 0          # Size 35
+    s_350_n = s_350_o = s_350_r = 0       # Size 350
+    s_3500_n = s_3500_o = s_3500_r = 0    # Size 3500
 
     # Runs each test 10 different times and averages the total times for each type of test
     print ('****************************** TESTING ******************************')
@@ -63,237 +63,237 @@ def main():
         print ('Running tests...')
 
         # Bubble sort testing
-        # Bubble sorting with arrays [10]
+        # Bubble sorting with arrays [35]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.bubble_sort(data_generation.neutraldata10_perm)
+        sortedList = sorts.bubble_sort(data_generation.neutraldata35_perm)
         time1_t = time.time()
-        b_10_n += (time1_t - time1)
+        b_35_n += (time1_t - time1)
     
         # Ordered
         time2 = time.time()
-        sortedList = sorts.bubble_sort(data_generation.ordereddata10_perm)
+        sortedList = sorts.bubble_sort(data_generation.ordereddata35_perm)
         time2_t = time.time()
-        b_10_o += (time2_t - time2)
+        b_35_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.bubble_sort(data_generation.reversedata10_perm)
+        sortedList = sorts.bubble_sort(data_generation.reverseddata35_perm)
         time3_t = time.time()
-        b_10_r += (time3_t - time3)
+        b_35_r += (time3_t - time3)
 
-        # Bubble sorting with arrays [100]
+        # Bubble sorting with arrays [350]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.bubble_sort(data_generation.neutraldata100_perm)
+        sortedList = sorts.bubble_sort(data_generation.neutraldata350_perm)
         time1_t = time.time()
-        b_100_n += (time1_t - time1)
+        b_350_n += (time1_t - time1)
     
         # Ordered
         time2 = time.time()
-        sortedList = sorts.bubble_sort(data_generation.ordereddata100_perm)
+        sortedList = sorts.bubble_sort(data_generation.ordereddata350_perm)
         time2_t = time.time()
-        b_100_o += (time2_t - time2)
+        b_350_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.bubble_sort(data_generation.reversedata100_perm)
+        sortedList = sorts.bubble_sort(data_generation.reverseddata350_perm)
         time3_t = time.time()
-        b_100_r += (time3_t - time3)
+        b_350_r += (time3_t - time3)
 
-        # Bubble sorting with arrays [1000]
+        # Bubble sorting with arrays [3500]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.bubble_sort(data_generation.neutraldata1000_perm)
+        sortedList = sorts.bubble_sort(data_generation.neutraldata3500_perm)
         time1_t = time.time()
-        b_1000_n += (time1_t - time1)
+        b_3500_n += (time1_t - time1)
     
         # Ordered
         time2 = time.time()
-        sortedList = sorts.bubble_sort(data_generation.ordereddata1000_perm)
+        sortedList = sorts.bubble_sort(data_generation.ordereddata3500_perm)
         time2_t = time.time()
-        b_1000_o += (time2_t - time2)
+        b_3500_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.bubble_sort(data_generation.reversedata1000_perm)
+        sortedList = sorts.bubble_sort(data_generation.reverseddata3500_perm)
         time3_t = time.time()
-        b_1000_r += (time3_t - time3)
+        b_3500_r += (time3_t - time3)
 
         # Merge sort testing
-        # Merge sorting with arrays [10]
+        # Merge sorting with arrays [35]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.merge_sort(data_generation.neutraldata10_perm)
+        sortedList = sorts.merge_sort(data_generation.neutraldata35_perm)
         time1_t = time.time()
-        m_10_n += (time1_t - time1)
+        m_35_n += (time1_t - time1)
         
         # Ordered
         time2 = time.time()
-        sortedList = sorts.merge_sort(data_generation.ordereddata10_perm)
+        sortedList = sorts.merge_sort(data_generation.ordereddata35_perm)
         time2_t = time.time()
-        m_10_o += (time2_t - time2)
+        m_35_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.merge_sort(data_generation.reversedata10_perm)
+        sortedList = sorts.merge_sort(data_generation.reverseddata35_perm)
         time3_t = time.time()
-        m_10_r += (time3_t - time3)
+        m_35_r += (time3_t - time3)
 
         # Sorting with arrays [100]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.merge_sort(data_generation.neutraldata100_perm)
+        sortedList = sorts.merge_sort(data_generation.neutraldata350_perm)
         time1_t = time.time()
-        m_100_n += (time1_t - time1)
+        m_350_n += (time1_t - time1)
         
         # Ordered
         time2 = time.time()
-        sortedList = sorts.merge_sort(data_generation.ordereddata100_perm)
+        sortedList = sorts.merge_sort(data_generation.ordereddata350_perm)
         time2_t = time.time()
-        m_100_o += (time2_t - time2)
+        m_350_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.merge_sort(data_generation.reversedata100_perm)
+        sortedList = sorts.merge_sort(data_generation.reverseddata350_perm)
         time3_t = time.time()
-        m_100_r += (time3_t - time3)
+        m_350_r += (time3_t - time3)
 
         # Sorting with arrays [1000]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.merge_sort(data_generation.neutraldata1000_perm)
+        sortedList = sorts.merge_sort(data_generation.neutraldata3500_perm)
         time1_t = time.time()
-        m_1000_n += (time1_t - time1)
+        m_3500_n += (time1_t - time1)
         
         # Ordered
         time2 = time.time()
-        sortedList = sorts.merge_sort(data_generation.ordereddata1000_perm)
+        sortedList = sorts.merge_sort(data_generation.ordereddata3500_perm)
         time2_t = time.time()
-        m_1000_o += (time2_t - time2)
+        m_3500_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.merge_sort(data_generation.reversedata1000_perm)
+        sortedList = sorts.merge_sort(data_generation.reverseddata3500_perm)
         time3_t = time.time()
-        m_1000_r += (time3_t - time3)
+        m_3500_r += (time3_t - time3)
 
         # Quick sort testing
         # Quick sorting with arrays [10]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.quick_sort(0, len(data_generation.neutraldata10_perm) - 1, data_generation.neutraldata10_perm)
+        sortedList = sorts.quick_sort(0, len(data_generation.neutraldata35_perm) - 1, data_generation.neutraldata35_perm)
         time1_t = time.time()
-        q_10_n += (time1_t - time1)
+        q_35_n += (time1_t - time1)
         
         # Ordered
         time2 = time.time()
-        sortedList = sorts.quick_sort(0, len(data_generation.ordereddata10_perm) - 1, data_generation.ordereddata10_perm)
+        sortedList = sorts.quick_sort(0, len(data_generation.ordereddata35_perm) - 1, data_generation.ordereddata35_perm)
         time2_t = time.time()
-        q_10_o += (time2_t - time2)
+        q_35_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.quick_sort(0, len(data_generation.reversedata10_perm) - 1, data_generation.reversedata10_perm)
+        sortedList = sorts.quick_sort(0, len(data_generation.reverseddata35_perm) - 1, data_generation.reverseddata35_perm)
         time3_t = time.time()
-        q_10_r += (time3_t - time3)
+        q_35_r += (time3_t - time3)
 
         
         # Quick sorting with arrays [100]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.quick_sort(0, len(data_generation.neutraldata100_perm) - 1, data_generation.neutraldata100_perm)
+        sortedList = sorts.quick_sort(0, len(data_generation.neutraldata350_perm) - 1, data_generation.neutraldata350_perm)
         time1_t = time.time()
-        q_100_n += (time1_t - time1)
+        q_350_n += (time1_t - time1)
     
         # Ordered
         time2 = time.time()
-        sortedList = sorts.quick_sort(0, len(data_generation.ordereddata100_perm) - 1, data_generation.ordereddata100_perm)
+        sortedList = sorts.quick_sort(0, len(data_generation.ordereddata350_perm) - 1, data_generation.ordereddata350_perm)
         time2_t = time.time()
-        q_100_o += (time2_t - time2)
+        q_350_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.quick_sort(0, len(data_generation.reversedata100_perm) - 1, data_generation.reversedata100_perm)
+        sortedList = sorts.quick_sort(0, len(data_generation.reverseddata350_perm) - 1, data_generation.reverseddata350_perm)
         time3_t = time.time()
-        q_100_r += (time3_t - time3)
+        q_350_r += (time3_t - time3)
 
         # Quick sorting with arrays [1000]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.quick_sort(0, len(data_generation.neutraldata1000_perm) - 1, data_generation.neutraldata1000_perm)
+        sortedList = sorts.quick_sort(0, len(data_generation.neutraldata3500_perm) - 1, data_generation.neutraldata3500_perm)
         time1_t = time.time()
-        q_1000_n += (time1_t - time1)
+        q_3500_n += (time1_t - time1)
         
         # Ordered
         time2 = time.time()
-        sortedList = sorts.quick_sort(0, len(data_generation.ordereddata1000_perm) - 1, data_generation.ordereddata1000_perm)
+        sortedList = sorts.quick_sort(0, len(data_generation.ordereddata3500_perm) - 1, data_generation.ordereddata3500_perm)
         time2_t = time.time()
-        q_1000_o += (time2_t - time2)
+        q_3500_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.quick_sort(0, len(data_generation.reversedata1000_perm) - 1, data_generation.reversedata1000_perm)
+        sortedList = sorts.quick_sort(0, len(data_generation.reverseddata3500_perm) - 1, data_generation.reverseddata3500_perm)
         time3_t = time.time()
-        q_1000_r += (time3_t - time3)
+        q_3500_r += (time3_t - time3)
 
         # Selection sort testing
         # Selection sorting with arrays [10]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.selection_sort(data_generation.neutraldata10_perm)
+        sortedList = sorts.selection_sort(data_generation.neutraldata35_perm)
         time1_t = time.time()
-        s_10_n += (time1_t - time1)
+        s_35_n += (time1_t - time1)
     
         # Ordered
         time2 = time.time()
-        sortedList = sorts.selection_sort(data_generation.ordereddata10_perm)
+        sortedList = sorts.selection_sort(data_generation.ordereddata35_perm)
         time2_t = time.time()
-        s_10_o += (time2_t - time2)
+        s_35_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.selection_sort(data_generation.reversedata10_perm)
+        sortedList = sorts.selection_sort(data_generation.reverseddata35_perm)
         time3_t = time.time()
-        s_10_r += (time3_t - time3)
+        s_35_r += (time3_t - time3)
 
         # Selection sorting with arrays [100]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.selection_sort(data_generation.neutraldata100_perm)
+        sortedList = sorts.selection_sort(data_generation.neutraldata350_perm)
         time1_t = time.time()
-        s_100_n += (time1_t - time1)
+        s_350_n += (time1_t - time1)
     
         # Ordered
         time2 = time.time()
-        sortedList = sorts.selection_sort(data_generation.ordereddata100_perm)
+        sortedList = sorts.selection_sort(data_generation.ordereddata350_perm)
         time2_t = time.time()
-        s_100_o += (time2_t - time2)
+        s_350_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.selection_sort(data_generation.reversedata100_perm)
+        sortedList = sorts.selection_sort(data_generation.reverseddata350_perm)
         time3_t = time.time()
-        s_100_r += (time3_t - time3)
+        s_350_r += (time3_t - time3)
 
         # Selection sorting with arrays [1000]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.selection_sort(data_generation.neutraldata1000_perm)
+        sortedList = sorts.selection_sort(data_generation.neutraldata3500_perm)
         time1_t = time.time()
-        s_1000_n += (time1_t - time1)
+        s_3500_n += (time1_t - time1)
     
         # Ordered
         time2 = time.time()
-        sortedList = sorts.selection_sort(data_generation.ordereddata1000_perm)
+        sortedList = sorts.selection_sort(data_generation.ordereddata3500_perm)
         time2_t = time.time()
-        s_1000_o += (time2_t - time2)
+        s_3500_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.selection_sort(data_generation.reversedata1000_perm)
+        sortedList = sorts.selection_sort(data_generation.reverseddata3500_perm)
         time3_t = time.time()
-        s_1000_r += (time3_t - time3)
+        s_3500_r += (time3_t - time3)
 
         # Prints newline
         print('Testing complete.\n')
@@ -304,86 +304,86 @@ def main():
     # Bubble sort results
     print ('\nAverage Bubble Sort results:')
 
-    # Size 10
-    print ('- Size 10:')
-    print('\t- Neutral: ', (b_10_n / 10))
-    print('\t- Ordered: ', (b_10_o / 10))
-    print('\t- Reversed: ', (b_10_r / 10))
+    # Size 35
+    print ('- Size 35:')
+    print('\t- Neutral: ', (b_35_n / 10))
+    print('\t- Ordered: ', (b_35_o / 10))
+    print('\t- Reversed: ', (b_35_r / 10))
 
-    # Size 100
-    print ('\n- Size 100:')
-    print('\t- Neutral: ', round((b_100_n / 10), 8))
-    print('\t- Ordered: ', round((b_100_o / 10), 8))
-    print('\t- Reversed: ', round((b_100_r / 10), 8))
+    # Size 350
+    print ('\n- Size 350:')
+    print('\t- Neutral: ', round((b_350_n / 10), 8))
+    print('\t- Ordered: ', round((b_350_o / 10), 8))
+    print('\t- Reversed: ', round((b_350_r / 10), 8))
 
-    # Size 1000
-    print ('\n- Size 1000:')
-    print('\t- Neutral: ', round((b_1000_n / 10), 5))
-    print('\t- Ordered: ', round((b_1000_o / 10), 5))
-    print('\t- Reversed: ', round((b_1000_r / 10), 5))
+    # Size 3500
+    print ('\n- Size 3500:')
+    print('\t- Neutral: ', round((b_3500_n / 10), 8))
+    print('\t- Ordered: ', round((b_3500_o / 10), 8))
+    print('\t- Reversed: ', round((b_3500_r / 10), 8))
 
     # Merge sort results
     print ('\nAverage Merge Sort results:')
 
-    # Size 10
-    print ('- Size 10:')
-    print('\t- Neutral: ', (m_10_n / 10))
-    print('\t- Ordered: ', (m_10_o / 10))
-    print('\t- Reversed: ', (m_10_r / 10))
+    # Size 35
+    print ('- Size 35:')
+    print('\t- Neutral: ', (m_35_n / 10))
+    print('\t- Ordered: ', (m_35_o / 10))
+    print('\t- Reversed: ', (m_35_r / 10))
 
-    # Size 100
-    print ('\n- Size 100:')
-    print('\t- Neutral: ', round((m_100_n / 10), 8))
-    print('\t- Ordered: ', round((m_100_o / 10), 8))
-    print('\t- Reversed: ', round((m_100_r / 10), 8))
+    # Size 350
+    print ('\n- Size 350:')
+    print('\t- Neutral: ', round((m_350_n / 10), 8))
+    print('\t- Ordered: ', round((m_350_o / 10), 8))
+    print('\t- Reversed: ', round((m_350_r / 10), 8))
 
-    # Size 1000
-    print ('\n- Size 1000:')
-    print('\t- Neutral: ', round((m_1000_n / 10), 5))
-    print('\t- Ordered: ', round((m_1000_o / 10), 5))
-    print('\t- Reversed: ', round((m_1000_r / 10), 5))
+    # Size 3500
+    print ('\n- Size 3500:')
+    print('\t- Neutral: ', round((m_3500_n / 10), 8))
+    print('\t- Ordered: ', round((m_3500_o / 10), 8))
+    print('\t- Reversed: ', round((m_3500_r / 10), 8))
 
     # Quick sort results
     print ('\nAverage Quick Sort results:')
 
-    # Size 10
-    print ('- Size 10:')
-    print('\t- Neutral: ', (q_10_n / 10))
-    print('\t- Ordered: ', (q_10_o / 10))
-    print('\t- Reversed: ', (q_10_r / 10))
+    # Size 35
+    print ('- Size 35:')
+    print('\t- Neutral: ', (q_35_n / 10))
+    print('\t- Ordered: ', (q_35_o / 10))
+    print('\t- Reversed: ', (q_35_r / 10))
 
-    # Size 100
-    print ('\n- Size 100:')
-    print('\t- Neutral: ', round((q_100_n / 10), 8))
-    print('\t- Ordered: ', round((q_100_o / 10), 8))
-    print('\t- Reversed: ', round((q_100_r / 10), 8))
+    # Size 350
+    print ('\n- Size 350:')
+    print('\t- Neutral: ', round((q_350_n / 10), 8))
+    print('\t- Ordered: ', round((q_350_o / 10), 8))
+    print('\t- Reversed: ', round((q_350_r / 10), 8))
 
-    # Size 1000
-    print ('\n- Size 1000:')
-    print('\t- Neutral: ', round((q_1000_n / 10), 5))
-    print('\t- Ordered: ', round((q_1000_o / 10), 5))
-    print('\t- Reversed: ', round((q_1000_r / 10), 5))
+    # Size 3500
+    print ('\n- Size 3500:')
+    print('\t- Neutral: ', round((q_3500_n / 10), 8))
+    print('\t- Ordered: ', round((q_3500_o / 10), 8))
+    print('\t- Reversed: ', round((q_3500_r / 10), 8))
 
     # Selection sort results
     print ('\nAverage Selection Sort results:')
 
-    # Size 10
-    print ('- Size 10:')
-    print('\t- Neutral: ', (s_10_n / 10))
-    print('\t- Ordered: ', (s_10_o / 10))
-    print('\t- Reversed: ', (s_10_r / 10))
+    # Size 35
+    print ('- Size 35:')
+    print('\t- Neutral: ', (s_35_n / 10))
+    print('\t- Ordered: ', (s_35_o / 10))
+    print('\t- Reversed: ', (s_35_r / 10))
 
-    # Size 100
-    print ('\n- Size 100:')
-    print('\t- Neutral: ', round((s_100_n / 10), 8))
-    print('\t- Ordered: ', round((s_100_o / 10), 8))
-    print('\t- Reversed: ', round((s_100_r / 10), 8))
+    # Size 350
+    print ('\n- Size 350:')
+    print('\t- Neutral: ', round((s_350_n / 10), 8))
+    print('\t- Ordered: ', round((s_350_o / 10), 8))
+    print('\t- Reversed: ', round((s_350_r / 10), 8))
 
-    # Size 1000
-    print ('\n- Size 1000:')
-    print('\t- Neutral: ', round((s_1000_n / 10), 5))
-    print('\t- Ordered: ', round((s_1000_o / 10), 5))
-    print('\t- Reversed: ', round((s_1000_r / 10), 5))
+    # Size 3500
+    print ('\n- Size 3500:')
+    print('\t- Neutral: ', round((s_3500_n / 10), 8))
+    print('\t- Ordered: ', round((s_3500_o / 10), 8))
+    print('\t- Reversed: ', round((s_3500_r / 10), 8))
 
 
 main()
