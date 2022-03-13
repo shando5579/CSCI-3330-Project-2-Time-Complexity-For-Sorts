@@ -1,5 +1,5 @@
 """
-@author: Nickolas Paternoster
+@author: Nickolas Paternoster and Shandon Probst
 @project: Algorithms Project 2
 @file: data_generation.py
 
