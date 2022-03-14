@@ -28,9 +28,9 @@ def defaultData():
     ranRange = range(1, 10000)
 
     # Neutral data
-    neutraldata35 = random.choices(ranRange, k = 35)
-    neutraldata350 = random.choices(ranRange, k = 350)
-    neutraldata3500 = random.choices(ranRange, k = 3500)
+    neutraldata35 = random.sample(ranRange, k = 35)
+    neutraldata350 = random.sample(ranRange, k = 350)
+    neutraldata3500 = random.sample(ranRange, k = 3500)
 
     # Ordered data
     ordereddata35 = neutraldata35.copy()
