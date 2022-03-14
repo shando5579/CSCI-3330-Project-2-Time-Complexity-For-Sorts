@@ -32,9 +32,9 @@ def main():
     m_3500_n = m_3500_o = m_3500_r = 0    # Size 3500
 
     # Quick
-    q_35_n = q_35_o = q_35_r = 0          # Size 35 
-    q_350_n = q_350_o = q_350_r = 0       # Size 350
-    q_3500_n = q_3500_o = q_3500_r = 0    # Size 3500
+    q_35_b = q_35_m = q_35_r = 0          # Size 35 
+    q_350_b = q_350_m = q_350_r = 0       # Size 350
+    q_3500_n = q_3500_m = q_3500_r = 0    # Size 3500
 
     # Selection
     s_35_n = s_35_o = s_35_r = 0          # Size 35
@@ -66,57 +66,66 @@ def main():
         # Bubble sorting with arrays [35]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.bubble_sort(data_generation.neutraldata35_perm)
+        sortedList = data_generation.neutraldata35_perm.copy()
+        sortedList = sorts.bubble_sort(sortedList)
         time1_t = time.time()
         b_35_n += (time1_t - time1)
     
         # Ordered
         time2 = time.time()
-        sortedList = sorts.bubble_sort(data_generation.ordereddata35_perm)
+        sortedList = data_generation.ordereddata35_perm.copy()
+        sortedList = sorts.bubble_sort(sortedList)
         time2_t = time.time()
         b_35_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.bubble_sort(data_generation.reverseddata35_perm)
+        sortedList = data_generation.reverseddata35_perm.copy()
+        sortedList = sorts.bubble_sort(sortedList)
         time3_t = time.time()
         b_35_r += (time3_t - time3)
 
         # Bubble sorting with arrays [350]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.bubble_sort(data_generation.neutraldata350_perm)
+        sortedList = data_generation.neutraldata350_perm.copy()
+        sortedList = sorts.bubble_sort(sortedList)
         time1_t = time.time()
         b_350_n += (time1_t - time1)
     
         # Ordered
         time2 = time.time()
-        sortedList = sorts.bubble_sort(data_generation.ordereddata350_perm)
+        sortedList = data_generation.ordereddata350_perm.copy()
+        sortedList = sorts.bubble_sort(sortedList)
         time2_t = time.time()
         b_350_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.bubble_sort(data_generation.reverseddata350_perm)
+        sortedList = data_generation.reverseddata350_perm.copy()
+        sortedList = sorts.bubble_sort(sortedList)
         time3_t = time.time()
         b_350_r += (time3_t - time3)
 
         # Bubble sorting with arrays [3500]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.bubble_sort(data_generation.neutraldata3500_perm)
+        sortedList = data_generation.neutraldata3500_perm.copy()
+        sortedList = sorts.bubble_sort(sortedList)
         time1_t = time.time()
         b_3500_n += (time1_t - time1)
     
         # Ordered
         time2 = time.time()
-        sortedList = sorts.bubble_sort(data_generation.ordereddata3500_perm)
+        sortedList = data_generation.ordereddata3500_perm.copy()
+        sortedList = sorts.bubble_sort(sortedList)
         time2_t = time.time()
         b_3500_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.bubble_sort(data_generation.reverseddata3500_perm)
+        sortedList = data_generation.reverseddata3500_perm.copy()
+        sortedList = sorts.bubble_sort(sortedList)
         time3_t = time.time()
         b_3500_r += (time3_t - time3)
 
@@ -124,174 +133,200 @@ def main():
         # Merge sorting with arrays [35]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.merge_sort(data_generation.neutraldata35_perm)
+        sortedList = data_generation.neutraldata35_perm.copy()
+        sortedList = sorts.merge_sort(sortedList)
         time1_t = time.time()
         m_35_n += (time1_t - time1)
         
         # Ordered
         time2 = time.time()
-        sortedList = sorts.merge_sort(data_generation.ordereddata35_perm)
+        sortedList = data_generation.ordereddata35_perm.copy()
+        sortedList = sorts.merge_sort(sortedList)
         time2_t = time.time()
         m_35_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.merge_sort(data_generation.reverseddata35_perm)
+        sortedList = data_generation.reverseddata35_perm.copy()
+        sortedList = sorts.merge_sort(sortedList)
         time3_t = time.time()
         m_35_r += (time3_t - time3)
 
-        # Sorting with arrays [100]
+        # Sorting with arrays [350]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.merge_sort(data_generation.neutraldata350_perm)
+        sortedList = data_generation.neutraldata350_perm.copy()
+        sortedList = sorts.merge_sort(sortedList)
         time1_t = time.time()
         m_350_n += (time1_t - time1)
         
         # Ordered
         time2 = time.time()
-        sortedList = sorts.merge_sort(data_generation.ordereddata350_perm)
+        sortedList = data_generation.ordereddata350_perm.copy()
+        sortedList = sorts.merge_sort(sortedList)
         time2_t = time.time()
         m_350_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.merge_sort(data_generation.reverseddata350_perm)
+        sortedList = data_generation.reverseddata350_perm.copy()
+        sortedList = sorts.merge_sort(sortedList)
         time3_t = time.time()
         m_350_r += (time3_t - time3)
 
-        # Sorting with arrays [1000]
+        # Sorting with arrays [3500]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.merge_sort(data_generation.neutraldata3500_perm)
+        sortedList = data_generation.neutraldata3500_perm.copy()
+        sortedList = sorts.merge_sort(sortedList)
         time1_t = time.time()
         m_3500_n += (time1_t - time1)
         
         # Ordered
         time2 = time.time()
-        sortedList = sorts.merge_sort(data_generation.ordereddata3500_perm)
+        sortedList = data_generation.ordereddata3500_perm.copy()
+        sortedList = sorts.merge_sort(sortedList)
         time2_t = time.time()
         m_3500_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.merge_sort(data_generation.reverseddata3500_perm)
+        sortedList = data_generation.reverseddata3500_perm.copy()
+        sortedList = sorts.merge_sort(sortedList)
         time3_t = time.time()
         m_3500_r += (time3_t - time3)
 
         # Quick sort testing
-        # Quick sorting with arrays [10]
-        # Neutral
+        # Quick sorting with arrays [35]
+        # Pivot is beginning of list
         time1 = time.time()
-        sortedList = sorts.quick_sort(0, len(data_generation.neutraldata35_perm) - 1, data_generation.neutraldata35_perm)
+        sortedList = data_generation.neutraldata35_perm.copy()
+        sorts.quick_sort_b(0, len(sortedList) - 1, sortedList)
         time1_t = time.time()
-        q_35_n += (time1_t - time1)
-        
-        # Ordered
-        time2 = time.time()
-        sortedList = sorts.quick_sort(0, len(data_generation.ordereddata35_perm) - 1, data_generation.ordereddata35_perm)
-        time2_t = time.time()
-        q_35_o += (time2_t - time2)
+        q_35_b += (time1_t - time1)
 
-        # Reversed
-        time3 = time.time()
-        sortedList = sorts.quick_sort(0, len(data_generation.reverseddata35_perm) - 1, data_generation.reverseddata35_perm)
-        time3_t = time.time()
-        q_35_r += (time3_t - time3)
-
-        
-        # Quick sorting with arrays [100]
-        # Neutral
+        # Pivot is middle of list
         time1 = time.time()
-        sortedList = sorts.quick_sort(0, len(data_generation.neutraldata350_perm) - 1, data_generation.neutraldata350_perm)
+        sortedList = data_generation.neutraldata35_perm.copy()
+        sortedList = sorts.quick_sort_m(sortedList)
         time1_t = time.time()
-        q_350_n += (time1_t - time1)
-    
-        # Ordered
-        time2 = time.time()
-        sortedList = sorts.quick_sort(0, len(data_generation.ordereddata350_perm) - 1, data_generation.ordereddata350_perm)
-        time2_t = time.time()
-        q_350_o += (time2_t - time2)
+        q_35_m += (time1_t - time1)
 
-        # Reversed
-        time3 = time.time()
-        sortedList = sorts.quick_sort(0, len(data_generation.reverseddata350_perm) - 1, data_generation.reverseddata350_perm)
-        time3_t = time.time()
-        q_350_r += (time3_t - time3)
-
-        # Quick sorting with arrays [1000]
-        # Neutral
+        # Pivot is random
         time1 = time.time()
-        sortedList = sorts.quick_sort(0, len(data_generation.neutraldata3500_perm) - 1, data_generation.neutraldata3500_perm)
+        sortedList = data_generation.neutraldata35_perm.copy()
+        sortedList = sorts.quicksort_r(sortedList, 0, len(sortedList) - 1)
+        time1_t = time.time()
+        q_35_r += (time1_t - time1)
+        
+        # Quick sorting with arrays [350]
+        # Pivot is beginning of list
+        time1 = time.time()
+        sortedList = data_generation.neutraldata350_perm.copy()
+        sorts.quick_sort_b(0, len(sortedList) - 1, sortedList)
+        time1_t = time.time()
+        q_350_b += (time1_t - time1)
+
+        # Pivot is middle of list
+        time1 = time.time()
+        sortedList = data_generation.neutraldata350_perm.copy()
+        sortedList = sorts.quick_sort_m(sortedList)
+        time1_t = time.time()
+        q_350_m += (time1_t - time1)
+
+        # Pivot is random
+        time1 = time.time()
+        sortedList = data_generation.neutraldata350_perm.copy()
+        sortedList = sorts.quicksort_r(sortedList, 0, len(sortedList) - 1)
+        time1_t = time.time()
+        q_350_r += (time1_t - time1)
+
+        # Quick sorting with arrays [3500]
+        # Pivot is beginning of list
+        time1 = time.time()
+        sortedList = data_generation.neutraldata3500_perm.copy()
+        sorts.quick_sort_b(0, len(sortedList) - 1, sortedList)
         time1_t = time.time()
         q_3500_n += (time1_t - time1)
-        
-        # Ordered
-        time2 = time.time()
-        sortedList = sorts.quick_sort(0, len(data_generation.ordereddata3500_perm) - 1, data_generation.ordereddata3500_perm)
-        time2_t = time.time()
-        q_3500_o += (time2_t - time2)
 
-        # Reversed
-        time3 = time.time()
-        sortedList = sorts.quick_sort(0, len(data_generation.reverseddata3500_perm) - 1, data_generation.reverseddata3500_perm)
-        time3_t = time.time()
-        q_3500_r += (time3_t - time3)
+        # Pivot is middle of list
+        time1 = time.time()
+        sortedList = data_generation.neutraldata3500_perm.copy()
+        sortedList = sorts.quick_sort_m(sortedList)
+        time1_t = time.time()
+        q_3500_m += (time1_t - time1)
+
+        # Pivot is random
+        time1 = time.time()
+        sortedList = data_generation.neutraldata3500_perm.copy()
+        sortedList = sorts.quicksort_r(sortedList, 0, len(sortedList) - 1)
+        time1_t = time.time()
+        q_3500_r += (time1_t - time1)
 
         # Selection sort testing
-        # Selection sorting with arrays [10]
+        # Selection sorting with arrays [35]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.selection_sort(data_generation.neutraldata35_perm)
+        sortedList = data_generation.neutraldata35_perm.copy()
+        sortedList = sorts.selection_sort(sortedList)
         time1_t = time.time()
         s_35_n += (time1_t - time1)
     
         # Ordered
         time2 = time.time()
-        sortedList = sorts.selection_sort(data_generation.ordereddata35_perm)
+        sortedList = data_generation.ordereddata35_perm.copy()
+        sortedList = sorts.selection_sort(sortedList)
         time2_t = time.time()
         s_35_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.selection_sort(data_generation.reverseddata35_perm)
+        sortedList = data_generation.reverseddata35_perm.copy()
+        sortedList = sorts.selection_sort(sortedList)
         time3_t = time.time()
         s_35_r += (time3_t - time3)
 
-        # Selection sorting with arrays [100]
+        # Selection sorting with arrays [350]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.selection_sort(data_generation.neutraldata350_perm)
+        sortedList = data_generation.neutraldata350_perm.copy()
+        sortedList = sorts.selection_sort(sortedList)
         time1_t = time.time()
         s_350_n += (time1_t - time1)
     
         # Ordered
         time2 = time.time()
-        sortedList = sorts.selection_sort(data_generation.ordereddata350_perm)
+        sortedList = data_generation.ordereddata350_perm.copy()
+        sortedList = sorts.selection_sort(sortedList)
         time2_t = time.time()
         s_350_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.selection_sort(data_generation.reverseddata350_perm)
+        sortedList = data_generation.reverseddata350_perm.copy()
+        sortedList = sorts.selection_sort(sortedList)
         time3_t = time.time()
         s_350_r += (time3_t - time3)
 
-        # Selection sorting with arrays [1000]
+        # Selection sorting with arrays [3500]
         # Neutral
         time1 = time.time()
-        sortedList = sorts.selection_sort(data_generation.neutraldata3500_perm)
+        sortedList = data_generation.neutraldata3500_perm.copy()
+        sortedList = sorts.selection_sort(sortedList)
         time1_t = time.time()
         s_3500_n += (time1_t - time1)
     
         # Ordered
         time2 = time.time()
-        sortedList = sorts.selection_sort(data_generation.ordereddata3500_perm)
+        sortedList = data_generation.ordereddata3500_perm.copy()
+        sortedList = sorts.selection_sort(sortedList)
         time2_t = time.time()
         s_3500_o += (time2_t - time2)
 
         # Reversed
         time3 = time.time()
-        sortedList = sorts.selection_sort(data_generation.reverseddata3500_perm)
+        sortedList = data_generation.reverseddata3500_perm.copy()
+        sortedList = sorts.selection_sort(sortedList)
         time3_t = time.time()
         s_3500_r += (time3_t - time3)
 
@@ -348,21 +383,21 @@ def main():
 
     # Size 35
     print ('- Size 35:')
-    print('\t- Neutral: ', (q_35_n / 10))
-    print('\t- Ordered: ', (q_35_o / 10))
-    print('\t- Reversed: ', (q_35_r / 10))
+    print('\t- Pivot = Beginning: ', (q_35_b / 10))
+    print('\t- Pivot = Middle: ', (q_35_m / 10))
+    print('\t- Pivot = Random: ', (q_35_r / 10))
 
     # Size 350
     print ('\n- Size 350:')
-    print('\t- Neutral: ', round((q_350_n / 10), 8))
-    print('\t- Ordered: ', round((q_350_o / 10), 8))
-    print('\t- Reversed: ', round((q_350_r / 10), 8))
+    print('\t- Pivot = Beginning: ', round((q_350_b / 10), 8))
+    print('\t- Pivot = Middle: ', round((q_350_m / 10), 8))
+    print('\t- Pivot = Random: ', round((q_350_r / 10), 8))
 
     # Size 3500
     print ('\n- Size 3500:')
-    print('\t- Neutral: ', round((q_3500_n / 10), 8))
-    print('\t- Ordered: ', round((q_3500_o / 10), 8))
-    print('\t- Reversed: ', round((q_3500_r / 10), 8))
+    print('\t- Pivot = Beginning: ', round((q_3500_n / 10), 8))
+    print('\t- Pivot = Middle: ', round((q_3500_m / 10), 8))
+    print('\t- Pivot = Random: ', round((q_3500_r / 10), 8))
 
     # Selection sort results
     print ('\nAverage Selection Sort results:')
